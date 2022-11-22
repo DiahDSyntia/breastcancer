@@ -34,13 +34,23 @@ Mana yang terbaik???
 # img = Image.open('logo2.png')
 # st.image(img, use_column_width=False)
 
-mhs = pd.read_csv("https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv")
-st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",mhs)
+cancer = pd.read_csv("https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv")
+st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
+st.write('Dataset Description :')
+st.write('1. age: Age of the patient')
+st.write('2. BMI : Body Mass Index (BMI) atau Indeks Massa Tubuh (IMT)')
+st.write('3. Glukosa: kandungan gula dalam tubuh')
+st.write('4. insulin: kandungan hormon dalam tubuh')
+st.write('5. HOMA: ')
+st.write('6. Leptin: Leptin adalah hormon yang dibuat oleh sel lemak. ')
+st.write('7. Adiponectin:merupakan adipositokin yang bersifat anti-inflamasi ')
+st.write('8. Resistin:  ')
+st.write('9. MCP.1: ')
 
-mhs['Classification'].unique()
+cancer['Classification'].unique()
 
-X=mhs.iloc[:,0:9].values
-y=mhs.iloc[:,9].values
+X=cancer.iloc[:,0:9].values
+y=cancer.iloc[:,9].values
 
 from sklearn.preprocessing import LabelEncoder
 le = LabelEncoder()
