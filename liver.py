@@ -25,9 +25,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 
 st.write("""
-# Prediksi Liver
-### Menggunakan Beberapa Algoritma Yang Berbeda
-Mana yang terbaik???
+# Prediksi Breast Cancer
+### Menggunakan Beberapa Metode Yang Berbeda
 """
 )
 
@@ -42,11 +41,11 @@ st.write('1. age: Age of the patient')
 st.write('2. BMI : Body Mass Index (BMI) atau Indeks Massa Tubuh (IMT)')
 st.write('3. Glukosa: kandungan gula dalam tubuh')
 st.write('4. insulin: kandungan hormon dalam tubuh')
-st.write('5. HOMA: ')
+st.write('5. HOMA: masukkan kadar HOMA dalam tubuh calon pasien,  ')
 st.write('6. Leptin: Leptin adalah hormon yang dibuat oleh sel lemak. ')
 st.write('7. Adiponectin:merupakan adipositokin yang bersifat anti-inflamasi ')
 st.write('8. Resistin: hormon disekresi yang ada dalam tubuh ')
-st.write('9. MCP.1: ')
+st.write('9. MCP.1: masukkan kadar mcp.1 dalam tubuh')
 
 cancer['Classification'].unique()
 
