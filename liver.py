@@ -35,6 +35,7 @@ Mana yang terbaik???
 # st.image(img, use_column_width=False)
 
 cancer = pd.read_csv("https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv")
+st.write("Link Repository (https://github.com/DiahDSyntia/breastcancer.git) ",cancer)
 st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
 st.write('Dataset Description :')
 st.write('1. age: Age of the patient')
@@ -44,7 +45,7 @@ st.write('4. insulin: kandungan hormon dalam tubuh')
 st.write('5. HOMA: ')
 st.write('6. Leptin: Leptin adalah hormon yang dibuat oleh sel lemak. ')
 st.write('7. Adiponectin:merupakan adipositokin yang bersifat anti-inflamasi ')
-st.write('8. Resistin:  ')
+st.write('8. Resistin: hormon disekresi yang ada dalam tubuh ')
 st.write('9. MCP.1: ')
 
 cancer['Classification'].unique()
