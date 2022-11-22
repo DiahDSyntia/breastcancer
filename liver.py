@@ -178,7 +178,7 @@ leptin = st.sidebar.number_input("Leptin =", 0.00)
 adiponectin = st.sidebar.number_input("Adiponectin =", 0.00)
 resistin = st.sidebar.number_input("Resistin =", 0.00)
 mcp = st.sidebar.number_input("MCP.1 =", 0.00)
-submit = st.sidebar.button("Submit")
+submit = st.sidebar.button("Prediksi")
 
 if submit :
     if algoritma == 'KNN' :
