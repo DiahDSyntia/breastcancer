@@ -35,7 +35,7 @@ Mana yang terbaik???
 # st.image(img, use_column_width=False)
 
 cancer = pd.read_csv("https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv")
-st.write("Link Repository (https://github.com/DiahDSyntia/breastcancer.git) ",cancer)
+st.write("Link Repository (https://github.com/DiahDSyntia/breastcancer) ",cancer)
 st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
 st.write('Dataset Description :')
 st.write('1. age: Age of the patient')
