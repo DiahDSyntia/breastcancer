@@ -70,7 +70,8 @@ st.sidebar.write("""
 
 tab_titles = [
     "Akurasi",
-    "Identifikasi Penyakit",]
+    "Identifikasi Penyakit",
+    "Link Repository Saya",]
 
 tabs = st.tabs(tab_titles)
 
@@ -236,3 +237,6 @@ with tabs[1]:
                 st.write("""# Anda Negative Breast Cancer""")
             else : 
                 st.write("""# Anda Positive Breast Cancer, Segera Ke Dokter""")
+            
+with tabs[2]:
+    st.write("Repository/Github (https://github.com/DiahDSyntia/breastcancer) ",cancer)
