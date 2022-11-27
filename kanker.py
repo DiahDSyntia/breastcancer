@@ -33,6 +33,7 @@ st.write("""
 img = Image.open('cancer.jpg')
 st.image(img, use_column_width=False)
 
+
 st.sidebar.write("""
             # Penjelasan Untuk Pengisi Form"""
             )
@@ -52,16 +53,16 @@ st.sidebar.write("""
             ####  5. HOMA: Diisi dengan jumlah HOMA dalam tubuh anda. homeostasis model aseessment (HOMA)
             """)
 st.sidebar.write("""
-            ####  6. Leptin: Diisi dengan jumlah Leptin dalam tubuh anda. Leptin adalah suatu protein yang berasal dari 167 asam amino,merupakan hormon yang di produksi oleh jaringan adiposa.
+            ####  6. Leptin: Diisi dengan jumlah Leptin dalam tubuh anda. Leptin adalah suatu protein yang berasal dari 167 asam amino,merupakan hormon yang di produksi oleh jaringan adiposa. Biasa ditentukan dalam bentuk (ng/mL)
             """)
 st.sidebar.write("""
-            ####  7. Adiponectin: Diisi dengan jumlah Adiponectin dalam tubuh anda
+            ####  7. Adiponectin: Diisi dengan jumlah Adiponectin dalam tubuh anda.
             """)           
 st.sidebar.write("""
-            ####  8. Resistin: Diisi dengan jumlah resistin dalam tubuh anda
+            ####  8. Resistin: Diisi dengan jumlah resistin dalam tubuh anda. Biasa ditentukan dalam bentuk (ng/mL)
             """)
 st.sidebar.write("""
-            ####  9. MCP: Diisi dengan jumlah MCP dalam tubuh anda. MCP (Monocyte Chemoattracttant Protein.1)
+            ####  9. MCP: Diisi dengan jumlah MCP dalam tubuh anda. MCP (Monocyte Chemoattracttant Protein-1). Biasa ditentukan dalam bentuk (pg/dL)
             """)
 st.sidebar.write("""
             ####  10. Setelah semuanya terisi silahkan klik prediksi untuk mengetahui hasil dari prediksi tersebut
