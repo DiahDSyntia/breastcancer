@@ -71,7 +71,7 @@ st.sidebar.write("""
 tab_titles = [
     "Akurasi",
     "Identifikasi Penyakit",
-    "Data Training dan Testing",
+    "Preprocessing Data",
     "Github dan Dataset",]
 
 tabs = st.tabs(tab_titles)
@@ -242,6 +242,12 @@ with tabs[2]:
     st.write("Jumlah Data Training:", len(X_train))
     st.write("Jumlah Data Testing:", len(X_test))
     st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
+
+    from sklearn.preprocessing import MinMaxScaler
+    scaler = MinMaxScaler()
+    scaled = scaler.fit_transform(X)
+    st.write("Hasil Preprocesing : ", scaled)
+    
     st.write("Data Training", X_train)
     st.write("Data Testing", X_test)
 
