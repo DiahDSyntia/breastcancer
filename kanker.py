@@ -90,6 +90,10 @@ with tabs[0]:
     le = LabelEncoder()
     y = le.fit_transform(y)
 
+    from sklearn.preprocessing import MinMaxScaler
+    scaler = MinMaxScaler()
+    scaled = scaler.fit_transform(X)
+
     #split dataset into train and test data
     X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=0)
     #st.write("Data Training", X_train)
@@ -239,15 +243,11 @@ with tabs[1]:
                 st.write("""# Anda Positive Breast Cancer, Segera Ke Dokter""")
 
 with tabs[2]:
-    st.write("Jumlah Data Training:", len(X_train))
-    st.write("Jumlah Data Testing:", len(X_test))
     st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
 
-    from sklearn.preprocessing import MinMaxScaler
-    scaler = MinMaxScaler()
-    scaled = scaler.fit_transform(X)
     st.write("Hasil Preprocesing : ", scaled)
-    
+    st.write("Jumlah Data Training:", len(X_train))
+    st.write("Jumlah Data Testing:", len(X_test))
     st.write("Data Training", X_train)
     st.write("Data Testing", X_test)
 
