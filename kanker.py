@@ -33,7 +33,6 @@ st.write("""
 img = Image.open('cancer.jpg')
 st.image(img, use_column_width=False)
 
-
 st.sidebar.write("""
             # Penjelasan Untuk Pengisi Form"""
             )
@@ -72,20 +71,20 @@ st.sidebar.write("""
 tab_titles = [
     "Akurasi",
     "Identifikasi Penyakit",
-    "Link Repository Saya",]
+    "Data Training dan Testing",
+    "Github dan Dataset",]
 
 tabs = st.tabs(tab_titles)
 
 with tabs[0]:
     cancer = pd.read_csv('https://raw.githubusercontent.com/DiahDSyntia/breastcancer/main/dataR2.csv')
 
-    cancer['Classification'].unique()
+    #cancer['Classification'].unique()
     
     X=cancer.iloc[:,0:9].values 
     y=cancer.iloc[:,9].values
 
     st.write('Jumlah baris dan kolom :', X.shape)
-    st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
 
     from sklearn.preprocessing import LabelEncoder
     le = LabelEncoder()
@@ -108,11 +107,11 @@ with tabs[0]:
     precision =precision_score(y_test, Y_pred,average='micro')
     recall =  recall_score(y_test, Y_pred,average='micro')
     f1 = f1_score(y_test,Y_pred,average='micro')
-    print('Confusion matrix for Naive Bayes\n',cm)
-    print('accuracy_Naive Bayes: %.3f' %accuracy)
-    print('precision_Naive Bayes: %.3f' %precision)
-    print('recall_Naive Bayes: %.3f' %recall)
-    print('f1-score_Naive Bayes : %.3f' %f1)
+    print('Confusion matrix for KNN\n',cm)
+    print('accuracy_KNN : %.3f' %accuracy)
+    print('precision_KNN : %.3f' %precision)
+    print('recall_KNN: %.3f' %recall)
+    print('f1-score_KNN : %.3f' %f1)
 
     #NAIVE BAYES
     gaussian = GaussianNB()
@@ -194,7 +193,7 @@ with tabs[1]:
     model=st.selectbox(
             'Metode Prediksi', ('K-Nearest Neighbor','Naive Bayes','Decision Tree','Random Forest'))
     with col1:
-        usia = st.number_input("Age",0)
+        usia = st.number_input("Usia",0)
         bmi = st.number_input("BMI",0.00)
         glukosa = st.number_input("Glukosa",0)
         insulin = st.number_input("Insulin",0.00)
@@ -238,6 +237,16 @@ with tabs[1]:
                 st.write("""# Anda Negative Breast Cancer""")
             else : 
                 st.write("""# Anda Positive Breast Cancer, Segera Ke Dokter""")
-            
+
 with tabs[2]:
-    st.write("Repository/Github (https://github.com/DiahDSyntia/breastcancer) ",cancer)
+    st.write("Jumlah Data Training:", len(X_train))
+    st.write("Jumlah Data Testing:", len(X_test))
+    st.write("Data Cancer (https://raw.githubusercontent.com/DiahDSyntia/Data-Mining/main/dataR2.csv) ",cancer)
+    st.write("Data Training", X_train)
+    st.write("Data Testing", X_test)
+
+with tabs[3]:
+    dataset = f"https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra"
+    github = f"https://github.com/DiahDSyntia/breastcancer"
+    st.write(f"Dataset yang digunakan dalam web ini adalah dataset yang diambil dari situs UCI Machine Learning Repository. [Klik Disini Untuk Dataset]({dataset}).")
+    st.write(f"Untuk Code dan Repository web ini bisa dilihat pada github saya. [Klik Disini Untuk Github]({github}).")
