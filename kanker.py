@@ -95,7 +95,8 @@ with tabs[0]:
     scaled = scaler.fit_transform(X)
 
     #split dataset into train and test data
-    X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_state=0)
+    from sklearn.model_selection import train_test_split
+    X_train, X_test, y_train, y_test=train_test_split(X, y, test_size=0.2, random_state=0)
     #st.write("Data Training", X_train)
     #st.write("Data Testing", X_test)
 
@@ -248,6 +249,7 @@ with tabs[2]:
     st.write("Hasil Preprocesing : ", scaled)
     st.write("Jumlah Data Training:", len(X_train))
     st.write("Jumlah Data Testing:", len(X_test))
+    X_train.shape + X_test.shape
     st.write("Data Training", X_train)
     st.write("Data Testing", X_test)
 
