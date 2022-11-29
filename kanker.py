@@ -72,7 +72,8 @@ tab_titles = [
     "Akurasi",
     "Identifikasi Penyakit",
     "Preprocessing Data",
-    "Github dan Dataset",]
+    "Github dan Dataset",
+    "Info Breast Cancer",]
 
 tabs = st.tabs(tab_titles)
 
@@ -258,3 +259,56 @@ with tabs[3]:
     github = f"https://github.com/DiahDSyntia/breastcancer"
     st.write(f"Dataset yang digunakan dalam web ini adalah dataset yang diambil dari situs UCI Machine Learning Repository. [Klik Disini Untuk Dataset]({dataset}).")
     st.write(f"Untuk Code dan Repository web ini bisa dilihat pada github saya. [Klik Disini Untuk Github]({github}).")
+
+with tabs[4]:
+    st.write("""
+    Breast Cancer/ Kanker Payudara adalah kondisi ketika sel kanker terbentuk di jaringan payudara. Breast Cancer bisa terbentuk di kelenjar yang menghasilkan susu (lobulus), atau di saluran (duktus) yang membawa air susu dari kelenjar ke puting payudara. Kanker juga bisa terbentuk di jaringan lemak atau jaringan ikat di dalam payudara.
+    """
+    )
+    st.write("""
+    Kanker payudara terbentuk saat sel-sel di dalam payudara tumbuh tidak normal dan tidak terkendali. Sel tersebut umumnya membentuk tumor yang terasa seperti benjolan. Meski biasanya terjadi pada wanita, kanker payudara juga bisa menyerang pria.
+    """
+    )
+    st.write("""
+    1. Karsinoma in situ
+    Beberapa orang didiagnosis ketika sel kanker masih sepenuhnya berada di dalam saluran atau lobulus. Ini disebut karsinoma in situ ( atau kanker payudara non-invasif), karena tidak ada sel kanker yang tumbuh dari tempat aslinya.
+
+    1. Ductal Carcinoma In Situ (DCIS) adalah jenis kanker payudara non-invasif yang paling umum dan sekitar 1 dari 5 kasus kanker payudara baru adalah DCIS. Karsinoma in situ lebih mudah diobati dan memiliki prospek yang lebih baik dibanding kanker invasif.
+    2. Lobular Carcinoma In Situ (LCIS) menghasilkan sel-sel abnormal pada kelenjar penghasil susu pada payudara. Sel-sel ini jarang menyebar di luar lobulus ke bagian lain dari payudara atau tubuh.
+    """
+    )
+    st.write("""
+    2. Kanker payudara invasif
+    Sebagian besar kanker payudara didiagnosis ketika tumor sudah tumbuh dari dalam saluran lobulus ke jaringan payudara di sekitarnya. Ini disebut kanker payudara invasif:
+
+    1. Kanker payudara duktal invasif dimulai di salah satu saluran payudara. Ada 8 dari 10 kasus kanker payudara ini.
+    2. Kanker payudara lobular invasif dimulai di salah satu lobus payudara. Ada 1 dari 10 kanker payudara ini.
+    3 Kanker payudara invasif dibagi menjadi kanker yang menyerang di daerah local atau pembuluh limfatik. Kanker payudara invasif dapat menyebar ke luar payudara.
+
+    3. Kanker payudara inflamasi
+    Jenis kanker payudara ini terjadi akibat sel-sel kanker menghalangi pembuluh limfa di kulit, dan bisa menyebabkan payudara membengkak dan memerah. Kanker ini cenderung tumbuh dan menyebar dengan cepat, bahkan gejalanya bisa memburuk dalam hitungan hari bahkan jam.
+
+    Kanker payudara inflamasi adalah bentuk kanker payudara yang tidak umum tetapi sangat agresif. Disebut inflamasi karena payudara seringkali terlihat bengkak dan merah meradang. Kanker payudara inflamasi cenderung didiagnosis pada wanita yang lebih muda daripada bentuk kanker payudara lainnya. Karena agresif dan sering didiagnosis ketika sudah sampai di tahap akhir, prospek dari penyakit ini biasanya lebih buruk dibanding kanker payudara lainnya.
+
+    4. Penyakit paget payudara
+    Penyakit paget payudara adalah jenis kanker yang langka pada area puting payudara. Ini muncul sebagai eksim yang mempengaruhi puting dan sering dikaitkan dengan karsinoma payudara invasif atau in situ.
+    """
+    )
+    st.write("""
+    ### Tanda Kanker Payudara/Breast Cancer
+    Banyak wanita menemukan bahwa payudara mereka menjadi lebih kental dan lembut sebelum mensturasi. Payudara juga berubah bentuk dan ukurannya dengan bertambahnya usia, kehamilan dan perubahan berat badan yang nyata. Yang penting adalah Anda mengenal payudara Anda sendiri, bagaimana penampilan dan rasanya, dan harus segera melapor perubahan apapun ke dokter.
+
+    Berikut adalah beberapa hal yang harus dipertimbangkan yang mungkin merupakan tanda-tanda dari kanker payudara:
+
+    Benjolan pada payudara
+    Tanda pertama adalah benjolan yang tidak nyeri di payudara. Kebanyakan benjolan di payudara tidak bersifat kanker (ganas). Sebagian besar benjolan payudara adalah kista berisi cairan atau fibroadenoma (jaringan kelenjar yang menggumpal) yang tidak bersifat kanker (jinak). Namun, Anda harus selalu memeriksakan diri ke dokter jika benjolan berkembang, karena benjolan pada payudara mungkin saja kanker (ganas).
+
+    Perubahan ukuran atau bentuk payudara
+    Lesung pipit atau penebalan sebagian kulit di bagian payudara
+    Puting susu masuk (terbalik)
+    Kadang-kadang ada keluar cairan dari putting (yang mungkin berlumuran darah)
+    Jenis kanker payudara yang langka, menyebabkan ruam di sekitar puting, yang terlihat mirip dengan bercak kecil eksim
+    Jarang terjadi nyeri pada payudara. Nyeri bukanlah gejala awal yang biasa. Banyak wanita mengalami nyeri payudara (mastalgia) dan ini biasanya tidak disebabkan oleh kanker
+    Tempat pertama penyebaran dari kanker payudara adalah kelenjar getah bening di ketiak. Jika ini terjadi, Anda mungkin mengalami pembengkakan atau benjolan di ketiak. Jika kanker menyebar ke bagian tubuh lain maka berbagai gejala lain bisa berkembang.
+    """
+    )
