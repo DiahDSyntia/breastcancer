@@ -71,7 +71,7 @@ st.sidebar.write("""
 tab_titles = [
     "Akurasi",
     "Identifikasi Penyakit",
-    "Preprocessing Data",
+    "Proses",
     "Github dan Dataset",
     "Info Breast Cancer",]
 
